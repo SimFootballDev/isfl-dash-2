@@ -140,4 +140,4 @@ footer = dash.html.Footer(
 app.layout = html.Div([navbar,dash.page_container,footer],className='dbc')
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)

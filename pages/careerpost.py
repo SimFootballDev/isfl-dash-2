@@ -58,9 +58,9 @@ def changeStats_p(value):
     if value == 'Passing':
         return [{'label': i, 'value': i} for i in ['Pass Yds', 'Pass Avg', 'Pass TD', 'Pass Int', 'Pass Rat', 'Pass Cmp', 'Pass Att', 'Pass Pct']]
     elif value == 'Rushing':
-        return [{'label': i, 'value': i} for i in ['Rush Att', 'Rush Yds', 'Rush Avg', 'Rush TD']]
+        return [{'label': i, 'value': i} for i in ['Rush Att', 'Rush Yds', 'Rush Avg', 'Rush TD', 'Rush Lg']]
     elif value == 'Receiving':
-        return [{'label': i, 'value': i} for i in ['Rec Rec', 'Rec Yds', 'Rec Avg', 'Rec TD']]
+        return [{'label': i, 'value': i} for i in ['Rec Rec', 'Rec Yds', 'Rec Avg', 'Rec TD', 'Rec Lg']]
     elif value == 'Kicking':
         return [{'label': i, 'value': i} for i in ['K XPM', 'K XPA', 'K XPPct', 'K FGM', 'K FGA', 'K FGPct', 'K FG_U20 Pct', 'K FG_2029 Pct', 'K FG_3039 Pct', 'K FG_4049 Pct', 'K FG_50 Pct', 'K FGM_U20', 'K FGA_U20', 'K FGM_2029', 'K FGA_2029', 'K FGM_3039', 'K FGA_3039', 'K FGM_4049', 'K FGA_4049', 'K FGM_50', 'K FGA_50']]
     elif value == 'Punting':
@@ -130,6 +130,7 @@ def display_table_p(value):
                 page_current=0,
                 page_size=10,
                 page_action='native',
+                export_format='csv',
                 style_cell_conditional=[
                     {'if': {'column_id': 'Rank'},
                     'max-width': '100px'},

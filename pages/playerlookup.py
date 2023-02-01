@@ -34,7 +34,7 @@ curW = csw.W
 
 career = pd.read_csv('s3://isfl-surrender-bot/AllStats/career.csv')
 careerRanks = pd.read_csv("s3://isfl-surrender-bot/AllStats/Ranks/career.csv")
-season = pd.read_csv('s3://isfl-surrender-bot/AllStats/season.csv').set_index('S')
+season = pd.read_csv('s3://isfl-surrender-bot/AllStats/season.csv').set_index('S').fillna(0)
 game = pd.read_csv('s3://isfl-surrender-bot/AllStats/game.csv',low_memory=False)
 
 optionsPlayers = [{"label":career.sort_values('FullName').iloc[i]['FullName'], "value":career.sort_values('FullName').iloc[i]['PlayerID']} for i in range(0,len(career))]
@@ -157,6 +157,7 @@ def update_output_div(input_value):
             page_current=0,
             page_size=15,
             page_action='native',
+            export_format='csv',
             style_table={'overflowX': 'auto'},
             style_header={
                 'backgroundColor': 'rgb(50, 50, 50)',
@@ -191,6 +192,7 @@ def update_output_div(input_value):
             page_current=0,
             page_size=15,
             page_action='native',
+            export_format='csv',
             style_table={'overflowX': 'auto'},
             style_header={
                 'backgroundColor': 'rgb(50, 50, 50)',
@@ -226,6 +228,7 @@ def update_output_div(input_value):
             page_current=0,
             page_size=15,
             page_action='native',
+            export_format='csv',
             style_table={'overflowX': 'auto'},
             style_header={
                 'backgroundColor': 'rgb(50, 50, 50)',
@@ -260,6 +263,7 @@ def update_output_div(input_value):
             page_current=0,
             page_size=15,
             page_action='native',
+            export_format='csv',
             style_table={'overflowX': 'auto'},
             style_header={
                 'backgroundColor': 'rgb(50, 50, 50)',
@@ -294,6 +298,7 @@ def update_output_div(input_value):
             page_current=0,
             page_size=15,
             page_action='native',
+            export_format='csv',
             style_table={'overflowX': 'auto'},
             style_header={
                 'backgroundColor': 'rgb(50, 50, 50)',
@@ -328,6 +333,7 @@ def update_output_div(input_value):
             page_current=0,
             page_size=15,
             page_action='native',
+            export_format='csv',
             style_table={'overflowX': 'auto'},
             style_header={
                 'backgroundColor': 'rgb(50, 50, 50)',
@@ -362,6 +368,7 @@ def update_output_div(input_value):
             page_current=0,
             page_size=15,
             page_action='native',
+            export_format='csv',
             style_table={'overflowX': 'auto'},
             style_header={
                 'backgroundColor': 'rgb(50, 50, 50)',
@@ -396,6 +403,7 @@ def update_output_div(input_value):
             page_current=0,
             page_size=15,
             page_action='native',
+            export_format='csv',
             style_table={'overflowX': 'auto'},
             style_header={
                 'backgroundColor': 'rgb(50, 50, 50)',
@@ -430,6 +438,7 @@ def update_output_div(input_value):
             page_current=0,
             page_size=15,
             page_action='native',
+            export_format='csv',
             style_table={'overflowX': 'auto'},
             style_header={
                 'backgroundColor': 'rgb(50, 50, 50)',

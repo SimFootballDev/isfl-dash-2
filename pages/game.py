@@ -133,6 +133,7 @@ def display_table_g(value):
                 page_current=0,
                 page_size=10,
                 page_action='native',
+                export_format='csv',
                 style_cell_conditional=[
                     {'if': {'column_id': 'Rank'},
                     'max-width': '100px'},
